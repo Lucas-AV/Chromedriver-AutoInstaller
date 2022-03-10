@@ -1,5 +1,5 @@
 import requests # Biblioteca utilizada para fazer requests a urls
-import platform # 
+import platform # Biblioteca utilizada para identificar o sistema operacional
 import zipfile  # Biblioteca utilizada para interagir com arquivos .zip
 import os       # Biblioteca utilizada para interagir com o sistema operacional 
 
@@ -35,6 +35,3 @@ def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
     
     # Retorno do local do chromedriver.exe
     return destiny + f"{bar}chromedriver.exe"                                                                   
-
-if __name__ == "__main__":
-    download_chromedriver(os.getcwdb().decode("utf-8"))
