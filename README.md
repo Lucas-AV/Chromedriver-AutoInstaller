@@ -4,7 +4,7 @@ Código criado para automatizar a instalação do chromedriver para trabalhar co
 | Biblioteca | Função |
 | --------- | --------- |
 | [requests](https://docs.python-requests.org/en/latest/) | Fazer requests HTTP de froma simples |
-| [platform](https://docs.python.org/3/library/zipfile.html) | Identificar o sistema operacional |
+| [platform](https://docs.python.org/3/library/platform.html) | Identificar o sistema operacional |
 | [zipfile](https://docs.python.org/3/library/zipfile.html) | Interagir com arquivos zipados |
 | [os](https://docs.python.org/3/library/os.html) | Interagir com o sistema operacional|
 ## Observações
