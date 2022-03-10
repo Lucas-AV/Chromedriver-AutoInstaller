@@ -23,7 +23,7 @@ def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
         
         # Coleta de versão
         chromeVersion = os.popen(f"wmic datafile where name='{chromePath}' get Version /value")                     # Busca pela versão atual do chrome.exe no terminal por meio do path dele no windows
-        chromeVersion = chromeVersion.read().replace("Version=","").replace("\n","")                                # Lê o resultado do comando anterior e retira os espaços vazios e outras informações desnecessárias
+        chromeVersion = chromeVersion.read().replace("Version=","").replace("\n","").replace(" ","")                # Lê o resultado do comando anterior e retira os espaços vazios e outras informações desnecessárias
     
     elif(os_name == "Linux"):
         chromeFile = "chromedriver_linux64.zip"
