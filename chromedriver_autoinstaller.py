@@ -4,10 +4,10 @@ import zipfile  # Biblioteca utilizada para interagir com arquivos .zip
 import os       # Biblioteca utilizada para interagir com o sistema operacional 
 
 def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
-    chromeFile = "chromedriver_win32.zip"
     # Identifica sistema operacional
     os_name = platform.system()
     if(os_name == "Windows"):
+        chromeFile = "chromedriver_win32.zip"
         bar = "\\"
         # Coleta do path do chrome.exe
         for root, dirs, files in os.walk(disk):                                                             # Olha os arquivos e pastas que estão no disco "disk"
@@ -34,4 +34,4 @@ def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
         zip_ref.extractall(destiny)                                                                         # Extrai o conteúdo do arquivo para o local "destiny"
     
     # Retorno do local do chromedriver.exe
-    return destiny + f"{bar}chromedriver.exe"                                                                   
+    return f"{destiny}{bar}chromedriver.exe"                                                                   
