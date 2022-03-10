@@ -36,5 +36,5 @@ def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
     # Retorno do local do chromedriver.exe
     return f"{destiny}{bar}chromedriver.exe"                                                                   
 
-if("__name__" == "__main__"):
+if(__name__ == "__main__"):
     download_chromedriver(os.getcwd())
