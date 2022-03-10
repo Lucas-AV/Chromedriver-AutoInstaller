@@ -4,6 +4,7 @@ import zipfile  # Biblioteca utilizada para interagir com arquivos .zip
 import os       # Biblioteca utilizada para interagir com o sistema operacional 
 
 def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
+    chromeFile = "chromedriver_win32.zip"
     # Identifica sistema operacional
     os_name = platform.system()
     if(os_name == "Windows"):
@@ -19,11 +20,12 @@ def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
         chromeVersion = chromeVersion.read().replace("Version=","").replace("\n","")                        # Lê o resultado do comando anterior e retira os espaços vazios e outras informações desnecessárias
     
     elif(os_name == "Linux"):
+        chromeFile = "chromedriver_linux64.zip"
         bar = "/"
         chromeVersion = os.popen('google-chrome --version').read().replace("Google Chrome ","")             # Retorna a versão do Google chrome
 
     # Etapa de download
-    downloadLink = f"https://chromedriver.storage.googleapis.com/{chromeVersion}/chromedriver_win32.zip"    # Abre o link de download do chromedriver
+    downloadLink = f"https://chromedriver.storage.googleapis.com/{chromeVersion}/{chromeFile}"              # Abre o link de download do chromedriver
     downloadLink = requests.get(downloadLink)                                                               # Abre o link de download do chromedriver
 
     # Etapa de download e extração
