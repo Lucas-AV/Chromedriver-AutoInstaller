@@ -10,3 +10,4 @@ Código criado para automatizar a instalação do chromedriver para trabalhar co
 ## Observações
 - Alguns diretórios podem dar erro de permissão dependendo do nível de execução do python que você está utilizando;
 - Decodificar com utf-8 diretórios que tenham caracteres especiais no nome;
+- Funciona tanto no Linux quanto no Windows;
