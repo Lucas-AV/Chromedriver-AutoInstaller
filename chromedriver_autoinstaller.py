@@ -22,7 +22,8 @@ def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
     elif(os_name == "Linux"):
         chromeFile = "chromedriver_linux64.zip"
         bar = "/"
-        chromeVersion = os.popen('google-chrome --version').read().replace("Google Chrome ","").replace("\n","")    # Retorna a versão do Google Chrome
+        chromeVersion = os.popen('google-chrome --version')                                                         # Retorna a versão do Google Chrome
+        chromeVersion = chromeVersion.read().replace("Google Chrome ","").replace("\n","").replace(" ","")          # Formata o texto retornado
 
     # Etapa de download
     downloadLink = f"https://chromedriver.storage.googleapis.com/{chromeVersion}/{chromeFile}"                      # Abre o link de download do chromedriver
