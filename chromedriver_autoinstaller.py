@@ -4,6 +4,10 @@ import zipfile  # Biblioteca utilizada para interagir com arquivos .zip
 import os       # Biblioteca utilizada para interagir com o sistema operacional 
 
 def download_chromedriver(destiny: str, disk: str = "C:\\") -> str:
+    try:
+        destiny = destiny.decode("utf-8")
+    except:
+        pass
     # Identifica sistema operacional
     os_name = platform.system()
     if(os_name == "Windows"):
