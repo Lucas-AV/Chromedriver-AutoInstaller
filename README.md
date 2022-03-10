@@ -1,5 +1,5 @@
 # Chromedriver-AutoInstaller
-Código criado para automatizar a instalação do chromedriver para trabalhar com bibliotecas de automação web como selenium por exemplo.
+Código criado para automatizar a instalação do chromedriver para trabalhar com selenium.
 ## Bibliotecas necessárias
 | Biblioteca | Função |
 | --------- | --------- |
